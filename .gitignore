@@ -1,0 +1,8 @@
+Library/
+Temp/
+obj/Debug/
+*.info
+*.mdb
+*.unityproj
+*.sln
+*.user
