@@ -47,6 +47,10 @@
   <ItemGroup>
      <Compile Include="Assets\MainEggBehaviuorScript.cs" />
      <Compile Include="Assets\QuestEggBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\ButtonImage.cs" />
+     <Compile Include="Assets\Scripts\EggControl.cs" />
+     <Compile Include="Assets\Scripts\GameCntr.cs" />
+     <Compile Include="Assets\Scripts\ShareImageCanvas.cs" />
      <Compile Include="Assets\Scripts\TakeEgg.cs" />
      <Compile Include="Assets\Vuforia\Scripts\BackgroundPlaneBehaviour.cs" />
      <Compile Include="Assets\Vuforia\Scripts\CloudRecoBehaviour.cs" />

@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ButtonImage.cs">
+    <Files>
+      <File FileName="Assets\Scripts\GameCntr.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EggControl.cs" Line="15" Column="48" />
+      <File FileName="Assets\Scripts\TakeEgg.cs" Line="20" Column="2" />
+      <File FileName="Assets\Scripts\ButtonImage.cs" Line="13" Column="50" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
