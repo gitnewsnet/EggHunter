@@ -8,7 +8,8 @@ public class TakeEgg : MonoBehaviour {
 
 	void Start(){
 		if (PlayerPrefs.GetInt (eggSprite.name) == 1) {
-			OnMouseDown ();
+			txt.SetActive (true);
+			gameObject.SetActive (false);
 		}
 	}
 
@@ -21,6 +22,7 @@ public class TakeEgg : MonoBehaviour {
 	public void saveEgg(){
 		PlayerPrefs.SetInt (eggSprite.name, 1);
 		eggSprite.GetComponent<SpriteRenderer> ().sprite = eggSprite.GetComponent<EggControl> ().eggChar;
+		PlayerPrefs.SetInt (GameCntr.COUNTER, PlayerPrefs.GetInt (GameCntr.COUNTER)+1);
 	}
 }
 
