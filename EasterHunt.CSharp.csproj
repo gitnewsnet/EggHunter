@@ -58,6 +58,12 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -75,8 +81,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\MainEggBehaviuorScript.cs" />
-    <Compile Include="Assets\QuestEggBehaviourScript.cs" />
+    <Compile Include="Assets\Models\Rabbit\WRFramework\Unity\Extensions\VectorExtensions.cs" />
+    <Compile Include="Assets\Models\Rabbit\WRFramework\Unity\UI\GUIHelper.cs" />
+    <Compile Include="Assets\Models\Rabbit\WRFramework\Unity\Util\Logo.cs" />
+    <Compile Include="Assets\Scripts\ButtonImage.cs" />
+    <Compile Include="Assets\Scripts\EasterEgg.cs" />
+    <Compile Include="Assets\Scripts\EggControl.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\InfoPanelScript.cs" />
+    <Compile Include="Assets\Scripts\MainEggBehaviuorScript.cs" />
+    <Compile Include="Assets\Scripts\QuestEggBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\RabbitController.cs" />
+    <Compile Include="Assets\Scripts\ShareImageCanvas.cs" />
+    <Compile Include="Assets\Scripts\TakeEgg.cs" />
+    <Compile Include="Assets\Scripts\TreasureChestScript.cs" />
     <Compile Include="Assets\Vuforia\Scripts\BackgroundPlaneBehaviour.cs" />
     <Compile Include="Assets\Vuforia\Scripts\CloudRecoBehaviour.cs" />
     <Compile Include="Assets\Vuforia\Scripts\CylinderTargetBehaviour.cs" />
@@ -118,7 +136,8 @@
     <Compile Include="Assets\Vuforia\Scripts\WordBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Cartoon Props Pack\Shaders\Diffuse_DoubleSided.shader" />
+    <None Include="Assets\Models\Cartoon Props Pack\Shaders\Diffuse_DoubleSided.shader" />
+    <None Include="Assets\Models\Rabbit\Scene\DancingRabbit\ReadMe.txt" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\StreamingAssets\QCAR\EasterHunt.xml" />
     <None Include="Assets\Vuforia\Editor\Scripts\Vuforia.UnityExtensions.Editor.XML" />
