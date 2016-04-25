@@ -5,6 +5,8 @@ using System.Collections;
 public class RabbitController : MonoBehaviour
 {
     public GameObject Rabbit;
+    public float timer = 15;
+    float RABBIT_TIME_LIFE = 15;
 
     public void OnMouseDown()
     {
@@ -19,6 +21,21 @@ public class RabbitController : MonoBehaviour
 
     void Start()
     {
+        gameObject.SetActive(false);
         PlayerPrefs.DeleteKey("rabbit");
+    }
+    public void Update()
+    {
+        timer -= Time.deltaTime;
+        if (timer < 0)
+        {
+            gameObject.SetActive(false);
+
+        }
+        if (gameObject.activeInHierarchy == false)
+        {
+            timer = RABBIT_TIME_LIFE;
+        }
+
     }
 }

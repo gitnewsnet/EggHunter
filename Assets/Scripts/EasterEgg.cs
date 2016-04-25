@@ -12,6 +12,8 @@ public class EasterEgg : MonoBehaviour
     public GameObject EasterRabbit5;
     public GameObject Egg;
 
+    RabbitController rContrl;
+
     private List<GameObject> RabbitsCollection = new List<GameObject>();
 
     // Use this for initialization
@@ -24,10 +26,6 @@ public class EasterEgg : MonoBehaviour
         RabbitsCollection.Add(EasterRabbit4);
         RabbitsCollection.Add(EasterRabbit5);
 
-        foreach (var rabbit in RabbitsCollection)
-        {
-            rabbit.SetActive(false);
-        }
     }
 
     // Update is called once per frame
@@ -38,14 +36,23 @@ public class EasterEgg : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (PlayerPrefs.GetInt(GameController.EGGS_COUNTER) == 6)
+        int rand = Random.Range(0, RabbitsCollection.Count);
+        Debug.Log(rand);
+        //	int i = rand;
+        Debug.Log(RabbitsCollection[rand].activeInHierarchy);
+        if (RabbitsCollection[rand].activeInHierarchy == false)
         {
-            Egg.SetActive(false);
-
-            foreach (var rabbit in RabbitsCollection)
-            {
-                rabbit.SetActive(true);
-            }
+            RabbitsCollection[rand].SetActive(true);
         }
+
+        /*     if (PlayerPrefs.GetInt(GameController.EGGS_COUNTER) == 6)
+             {
+                 Egg.SetActive(false);
+
+                 foreach (var rabbit in RabbitsCollection)
+                 {
+                     rabbit.SetActive(true);
+                 }
+             }*/
     }
 }
