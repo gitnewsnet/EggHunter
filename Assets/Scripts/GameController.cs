@@ -16,13 +16,6 @@ public class GameController : MonoBehaviour
 		TreasureChest.SetActive(false);
     }
 
-    void Update()
-    {
-      //  if (PlayerPrefs.GetInt(GameController.RABBITS_COUNTER) == 6)
-      //  {            TreasureChest.SetActive(true);
-      //      InfoPanel.SetActive(true);          }
-    }
-
     public void closeInfoPanel()
     {
         InfoPanel.SetActive(false);
@@ -32,6 +25,7 @@ public class GameController : MonoBehaviour
 	public void resetGame(){
 		int result = 0;
 		PlayerPrefs.SetInt (GameController.RABBITS_COUNTER, result);
+		PlayerPrefs.SetInt (GameController.EGGS_COUNTER, result);
 		foreach(string egg in eggsName){
 			PlayerPrefs.SetInt (egg, result);
 		}
