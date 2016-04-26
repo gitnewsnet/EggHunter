@@ -5,6 +5,7 @@ public class GameController : MonoBehaviour
 {
     public static string EGGS_COUNTER = "counter";
     public static string RABBITS_COUNTER = "rabbit";
+	public static int RABBITS = 6;
 
     public GameObject InfoPanel;
     public GameObject TreasureChest;

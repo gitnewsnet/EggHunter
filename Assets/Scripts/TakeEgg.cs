@@ -17,7 +17,7 @@ public class TakeEgg : MonoBehaviour
 
     public void OnMouseDown()
     {
-        //txt.SetActive(true);
+        txt.SetActive(true);
         gameObject.SetActive(false);
         saveEgg();
     }

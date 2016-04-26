@@ -22,7 +22,7 @@ public class InfoPanelScript : MonoBehaviour
                 BodyInfo.text = "Your score: " + PlayerPrefs.GetInt(GameController.EGGS_COUNTER);
                 break;
 			case 6:
-				if (PlayerPrefs.GetInt (GameController.EGGS_COUNTER) == 6 && PlayerPrefs.GetInt (GameController.RABBITS_COUNTER) == 6) {
+			if (PlayerPrefs.GetInt (GameController.EGGS_COUNTER) == 6 && PlayerPrefs.GetInt (GameController.RABBITS_COUNTER) == GameController.RABBITS) {
 					BodyInfo.text = "You are lucky!\n  You've found secret Easter EGG!\n Let's go to the Reception";        
 				} else {
 					BodyInfo.text = "You Win! Try your luck on the Reception.";
