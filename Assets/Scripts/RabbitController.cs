@@ -4,8 +4,9 @@ using System.Collections;
 
 public class RabbitController : MonoBehaviour
 {
+    public static int sRabbitCounter = 0; 
     public GameObject Rabbit;
-    public float timer = 15;
+    public float RabbitLifeTimer = 15;
     float RABBIT_TIME_LIFE = 15;
 	private bool isPressed = false;
 	public GameObject InfoPanel;
@@ -14,15 +15,17 @@ public class RabbitController : MonoBehaviour
     {
         Rabbit.SetActive(false);
         TakeRabbit();
-		if (PlayerPrefs.GetInt (GameController.EGGS_COUNTER) == 6 && PlayerPrefs.GetInt (GameController.RABBITS_COUNTER) >= GameController.RABBITS) {
-		 	InfoPanel.SetActive (true);
+		if (PlayerPrefs.GetInt (GameController.GAME_STATUS) == 2 && sRabbitCounter >= GameController.RABBITS) {
+            PlayerPrefs.SetInt(GameController.GAME_STATUS, 3);
+            InfoPanel.SetActive (true);
 		}
+      
     }
 
     void TakeRabbit()
     {
 		if (!isPressed) {
-			PlayerPrefs.SetInt (GameController.RABBITS_COUNTER, PlayerPrefs.GetInt (GameController.RABBITS_COUNTER) + 1);
+            sRabbitCounter++;
 			isPressed = true;
 		}
     }
@@ -38,15 +41,15 @@ public class RabbitController : MonoBehaviour
     }
 
 	private void timerControl(){
-		timer -= Time.deltaTime;
-		if (timer < 0)
+		RabbitLifeTimer -= Time.deltaTime;
+		if (RabbitLifeTimer < 0)
 		{
 			if (isPressed) {
-				PlayerPrefs.SetInt (GameController.RABBITS_COUNTER, PlayerPrefs.GetInt (GameController.RABBITS_COUNTER) - 1);
+                sRabbitCounter--;
 			}
 			isPressed = false;
 			gameObject.SetActive(false);
-			timer = RABBIT_TIME_LIFE;
+			RabbitLifeTimer = RABBIT_TIME_LIFE;
 		}      
 	}
 }
