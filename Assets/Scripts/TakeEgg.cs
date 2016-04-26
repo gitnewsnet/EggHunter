@@ -8,11 +8,11 @@ public class TakeEgg : MonoBehaviour
 
     private void Start()
     {
-        //if (PlayerPrefs.GetInt(eggSprite.name) == 1)
-        //{
-        //    txt.SetActive(true);
-        //    gameObject.SetActive(false);
-        //}
+        if (PlayerPrefs.GetInt(eggSprite.name) == 1)
+        {
+            txt.SetActive(true);
+            gameObject.SetActive(false);
+        }
     }
 
     public void OnMouseDown()

@@ -12,7 +12,7 @@ public class InfoPanelScript : MonoBehaviour
         switch (PlayerPrefs.GetInt(GameController.EGGS_COUNTER))
         {
             case 0:
-                BodyInfo.text = "Let's play - follow the Easter Rabit's tracks";
+                BodyInfo.text = "Start your trip from the Reception";
                 break;
             case 1:
             case 2:
@@ -22,14 +22,12 @@ public class InfoPanelScript : MonoBehaviour
                 BodyInfo.text = "Your score: " + PlayerPrefs.GetInt(GameController.EGGS_COUNTER);
                 break;
             case 6:
-                BodyInfo.text = "You Win! Try your luck on reception.";
+                BodyInfo.text = "You Win! Try your luck on the Reception.";
                 break;
         }
 
-        if (PlayerPrefs.GetInt(GameController.EGGS_COUNTER) == 6 && PlayerPrefs.GetInt(GameController.RABBITS_COUNTER) == 6)
-        {
-            BodyInfo.text = "You are lucky :) Get your prize on reception";
-        }
+    //    if (PlayerPrefs.GetInt(GameController.EGGS_COUNTER) == 6 && PlayerPrefs.GetInt(GameController.RABBITS_COUNTER) == 6)
+    //    {            BodyInfo.text = "You are lucky :) Get your prize on the Reception";         }
 
         InfoPanel.SetActive(true);
     }

@@ -30,4 +30,14 @@ public class GameController : MonoBehaviour
     {
         InfoPanel.SetActive(false);
     }
+
+	private  IList eggsName = new ArrayList(){"Egg_E1", "Egg_A", "Egg_S", "Egg_T", "Egg_E2", "Egg_R"};
+	public void resetGame(){
+		int result = 0;
+		PlayerPrefs.SetInt (GameController.RABBITS_COUNTER, result);
+		foreach(string egg in eggsName){
+			PlayerPrefs.SetInt (egg, result);
+		}
+	}
+
 }
