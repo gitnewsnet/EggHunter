@@ -7,7 +7,7 @@ public class RabbitController : MonoBehaviour
     public static int sRabbitCounter = 0; 
     public GameObject Rabbit;
     public float RabbitLifeTimer = 15;
-    float RABBIT_TIME_LIFE = 15;
+    static float RABBIT_TIME_LIFE = 15;
 	private bool isPressed = false;
 	public GameObject InfoPanel;
 
@@ -15,9 +15,13 @@ public class RabbitController : MonoBehaviour
     {
         Rabbit.SetActive(false);
         TakeRabbit();
+		Debug.Log ("GAME Starus:  "+PlayerPrefs.GetInt (GameController.GAME_STATUS));
+		Debug.Log ("sRabbitCounter:  "+sRabbitCounter);
 		if (PlayerPrefs.GetInt (GameController.GAME_STATUS) == 2 && sRabbitCounter >= GameController.RABBITS) {
             PlayerPrefs.SetInt(GameController.GAME_STATUS, 3);
-            InfoPanel.SetActive (true);
+			InfoPanel.GetComponent<InfoPanelScript>().openInfoPanel();
+			InfoPanel.GetComponent<InfoPanelScript>().GameControl.GetComponent<GameController> ().TreasureChest.SetActive (true);
+
 		}
       
     }

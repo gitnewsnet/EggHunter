@@ -6,6 +6,7 @@ public class InfoPanelScript : MonoBehaviour
 {
     public GameObject InfoPanel;
     public Text BodyInfo;
+	public GameObject GameControl;
 
     public void openInfoPanel()
     {
@@ -18,7 +19,7 @@ public class InfoPanelScript : MonoBehaviour
                 BodyInfo.text = "Your score: " + PlayerPrefs.GetInt(GameController.EGGS_COUNTER);
                 break;
             case 2:
-                BodyInfo.text = "You Win! Try your luck on the Reception.";
+                BodyInfo.text = "You Win! Try your luck on the Reception";
                 break;
             case 3:
 			    BodyInfo.text = "You are lucky!\n  You've found secret Easter EGG!\n Let's go to the Reception";        				

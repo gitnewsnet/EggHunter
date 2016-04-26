@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
     void Start()
     {        
 		//PlayerPrefs.DeleteKey(GAME_STATUS);
-		if (PlayerPrefs.GetInt(GameController.GAME_STATUS)==3) TreasureChest.SetActive(false);
+		if (PlayerPrefs.GetInt(GameController.GAME_STATUS)==3) TreasureChest.SetActive(true);
     }
 
     public void closeInfoPanel()
@@ -29,6 +29,7 @@ public class GameController : MonoBehaviour
 		foreach(string egg in eggsName){
 			PlayerPrefs.SetInt (egg, result);
 		}
+		Debug.Log ("RESET");
 	}
 
 }

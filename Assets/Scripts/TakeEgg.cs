@@ -5,6 +5,7 @@ public class TakeEgg : MonoBehaviour
 {
     public GameObject txt;
     public GameObject eggSprite;
+	public GameObject InfoPanel;
 
     private void Start()
     {
@@ -26,9 +27,10 @@ public class TakeEgg : MonoBehaviour
     {
         PlayerPrefs.SetInt(eggSprite.name, 1);    
         PlayerPrefs.SetInt(GameController.EGGS_COUNTER, PlayerPrefs.GetInt(GameController.EGGS_COUNTER)+1);
-        if (PlayerPrefs.GetInt(GameController.EGGS_COUNTER) == 6)
-            PlayerPrefs.SetInt(GameController.GAME_STATUS, 2);
-        else
+		if (PlayerPrefs.GetInt (GameController.EGGS_COUNTER) == 6) {
+			PlayerPrefs.SetInt (GameController.GAME_STATUS, 2);
+			InfoPanel.GetComponent<InfoPanelScript>().openInfoPanel();	
+		}else
             PlayerPrefs.SetInt(GameController.GAME_STATUS, 1);
 
         eggSprite.GetComponent<SpriteRenderer>().sprite = eggSprite.GetComponent<EggControl>().eggChar;
