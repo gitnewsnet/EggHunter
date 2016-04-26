@@ -41,6 +41,9 @@ public class RabbitController : MonoBehaviour
 		timer -= Time.deltaTime;
 		if (timer < 0)
 		{
+			if (isPressed) {
+				PlayerPrefs.SetInt (GameController.RABBITS_COUNTER, PlayerPrefs.GetInt (GameController.RABBITS_COUNTER) - 1);
+			}
 			isPressed = false;
 			gameObject.SetActive(false);
 			timer = RABBIT_TIME_LIFE;
