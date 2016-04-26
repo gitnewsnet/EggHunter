@@ -30,12 +30,8 @@ public class RabbitController : MonoBehaviour
         if (timer < 0)
         {
             gameObject.SetActive(false);
-
+			timer = RABBIT_TIME_LIFE;
         }
-        if (gameObject.activeInHierarchy == false)
-        {
-            timer = RABBIT_TIME_LIFE;
-        }
-
+        
     }
 }

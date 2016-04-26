@@ -12,7 +12,7 @@ public class EasterEgg : MonoBehaviour
     public GameObject EasterRabbit5;
     public GameObject Egg;
 
-    RabbitController rContrl;
+    
 
     private List<GameObject> RabbitsCollection = new List<GameObject>();
 
@@ -37,22 +37,6 @@ public class EasterEgg : MonoBehaviour
     public void OnMouseDown()
     {
         int rand = Random.Range(0, RabbitsCollection.Count);
-        Debug.Log(rand);
-        //	int i = rand;
-        Debug.Log(RabbitsCollection[rand].activeInHierarchy);
-        if (RabbitsCollection[rand].activeInHierarchy == false)
-        {
-            RabbitsCollection[rand].SetActive(true);
-        }
-
-        /*     if (PlayerPrefs.GetInt(GameController.EGGS_COUNTER) == 6)
-             {
-                 Egg.SetActive(false);
-
-                 foreach (var rabbit in RabbitsCollection)
-                 {
-                     rabbit.SetActive(true);
-                 }
-             }*/
+		RabbitsCollection[rand].SetActive(true);
     }
 }

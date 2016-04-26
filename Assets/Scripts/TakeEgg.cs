@@ -26,6 +26,6 @@ public class TakeEgg : MonoBehaviour
     {
         PlayerPrefs.SetInt(eggSprite.name, 1);
         eggSprite.GetComponent<SpriteRenderer>().sprite = eggSprite.GetComponent<EggControl>().eggChar;
-        PlayerPrefs.SetInt(GameController.EGGS_COUNTER, PlayerPrefs.GetInt(GameController.EGGS_COUNTER) + 1);
+		PlayerPrefs.SetInt(GameController.EGGS_COUNTER, PlayerPrefs.GetInt(GameController.EGGS_COUNTER)+1);
     }
 }

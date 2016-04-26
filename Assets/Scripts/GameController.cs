@@ -10,20 +10,16 @@ public class GameController : MonoBehaviour
     public GameObject TreasureChest;
 
     void Start()
-    {
-        PlayerPrefs.DeleteKey("counter");
-        PlayerPrefs.DeleteKey("rabbit");
-
-        TreasureChest.SetActive(false);
+    {        
+		PlayerPrefs.DeleteKey(RABBITS_COUNTER);
+		TreasureChest.SetActive(false);
     }
 
     void Update()
     {
-        if (PlayerPrefs.GetInt(GameController.RABBITS_COUNTER) == 6)
-        {
-            TreasureChest.SetActive(true);
-            InfoPanel.SetActive(true);
-        }
+      //  if (PlayerPrefs.GetInt(GameController.RABBITS_COUNTER) == 6)
+      //  {            TreasureChest.SetActive(true);
+      //      InfoPanel.SetActive(true);          }
     }
 
     public void closeInfoPanel()
