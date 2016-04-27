@@ -2,7 +2,5 @@ Library/
 Temp/
 obj/Debug/
 
-
-*.sln
 *.user
 *.apk
