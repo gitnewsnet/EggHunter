@@ -7,6 +7,7 @@ public class InfoPanelScript : MonoBehaviour
     public GameObject InfoPanel;
     public Text BodyInfo;
 	public GameObject GameControl;
+	public  AudioSource audio;
 
     public void openInfoPanel()
     {
@@ -18,11 +19,13 @@ public class InfoPanelScript : MonoBehaviour
             case 1:
                 BodyInfo.text = "Your have collected: " + PlayerPrefs.GetInt(GameController.EGGS_COUNTER) + " from 6";
                 break;
-            case 2:
-                BodyInfo.text = "You Won! Try your luck at the Reception";
+			case 2:
+				BodyInfo.text = "You Won! Try your luck at the Reception";
+				audio.Play();
                 break;
             case 3:
-			    BodyInfo.text = "You are lucky!\n  You've found secret Easter EGG!\n Let's go to the Reception";        				
+			    BodyInfo.text = "You are lucky!\n  You've found secret Easter EGG!\n Let's go to the Reception"; 
+				audio.Play();
 	            break;
         }
 
@@ -33,5 +36,6 @@ public class InfoPanelScript : MonoBehaviour
     public void closeInfoPanel()
     {
         InfoPanel.SetActive(false);
+		audio.Stop();
     }
 }

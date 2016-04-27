@@ -6,6 +6,7 @@ public class TakeEgg : MonoBehaviour
     public GameObject txt;
     public GameObject eggSprite;
 	public GameObject InfoPanel;
+	public  AudioSource audio;
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class TakeEgg : MonoBehaviour
         txt.SetActive(true);
         gameObject.SetActive(false);
         saveEgg();
+		audio.Play ();
     }
 
     public void saveEgg()
