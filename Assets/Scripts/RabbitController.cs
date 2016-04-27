@@ -28,7 +28,7 @@ public class RabbitController : MonoBehaviour
 
     void TakeRabbit()
     {
-		if (!isPressed) {
+		if (!isPressed&&PlayerPrefs.GetInt (GameController.GAME_STATUS) == 2) {
             sRabbitCounter++;
 			isPressed = true;
 		}
