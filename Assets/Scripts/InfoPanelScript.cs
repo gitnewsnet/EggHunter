@@ -16,15 +16,17 @@ public class InfoPanelScript : MonoBehaviour
                 BodyInfo.text = "Start your trip from the Reception";  
                 break;
             case 1:
-                BodyInfo.text = "Your score: " + PlayerPrefs.GetInt(GameController.EGGS_COUNTER);
+                BodyInfo.text = "Your have collected: " + PlayerPrefs.GetInt(GameController.EGGS_COUNTER) + " from 6";
                 break;
             case 2:
-                BodyInfo.text = "You Win! Try your luck on the Reception";
+                BodyInfo.text = "You Won! Try your luck at the Reception";
                 break;
             case 3:
 			    BodyInfo.text = "You are lucky!\n  You've found secret Easter EGG!\n Let's go to the Reception";        				
 	            break;
         }
+
+
         InfoPanel.SetActive(true);
     }
 
