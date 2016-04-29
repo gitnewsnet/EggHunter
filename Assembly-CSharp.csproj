@@ -48,6 +48,8 @@
      <Compile Include="Assets\Models\Rabbit\WRFramework\Unity\Extensions\VectorExtensions.cs" />
      <Compile Include="Assets\Models\Rabbit\WRFramework\Unity\UI\GUIHelper.cs" />
      <Compile Include="Assets\Models\Rabbit\WRFramework\Unity\Util\Logo.cs" />
+     <Compile Include="Assets\MrRabZ\RabbitActionController.cs" />
+     <Compile Include="Assets\MrRabZ\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\ButtonImage.cs" />
      <Compile Include="Assets\Scripts\EasterEgg.cs" />
      <Compile Include="Assets\Scripts\EggControl.cs" />
@@ -102,6 +104,7 @@
      <None Include="Assets\link.xml" />
      <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
      <None Include="Assets\Vuforia\Shaders\RenderVideoBackground.shader" />
+     <None Include="Assets\MrRabZ\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
      <None Include="Assets\StreamingAssets\QCAR\EasterHunt.xml" />
