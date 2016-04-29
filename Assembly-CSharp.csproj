@@ -45,9 +45,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Models\Rabbit\WRFramework\Unity\Extensions\VectorExtensions.cs" />
-     <Compile Include="Assets\Models\Rabbit\WRFramework\Unity\UI\GUIHelper.cs" />
-     <Compile Include="Assets\Models\Rabbit\WRFramework\Unity\Util\Logo.cs" />
      <Compile Include="Assets\MrRabZ\RabbitActionController.cs" />
      <Compile Include="Assets\MrRabZ\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\ButtonImage.cs" />
@@ -115,7 +112,6 @@
      <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
      <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
      <None Include="Assets\license_3rdpartynotice.txt" />
-     <None Include="Assets\Models\Rabbit\Scene\DancingRabbit\ReadMe.txt" />
      <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
